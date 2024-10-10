@@ -73,3 +73,13 @@ public:
             head = newNode;
         }
     }
+
+    void print() const {
+        Node* current = head;
+        if (!currrent) {
+            cout << "List is empty" << endl;
+            return;
+        }
+        while (current) {
+            cout << "    " << current->data << endl;
+            curren
