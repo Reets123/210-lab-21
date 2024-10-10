@@ -110,3 +110,13 @@ public:
 
 int main() {
     srand(time(0));
+
+    DoublyLinkedList list;
+    int size = rand() % (16) + 5; // Random size between 5 and 20
+    for (int i = 0; i < size; ++i) {
+        Goat goat; 
+        list.push_back(goat); 
+    }
+
+    cout << "Forward:" << endl;
+    list.prin
