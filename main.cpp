@@ -101,4 +101,12 @@ public:
 
     ~DoublyLinkedList() {
         while (head) {
-            Node* 
+            Node* temp = head;
+            head = head->next;
+            delete temp;
+        }
+    }
+};
+
+int main() {
+    srand(time(0));
