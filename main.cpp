@@ -29,4 +29,47 @@ public:
 
     // Overloading << operator for easy printing of Goat object
     friend ostream& operator<<(ostream& os, const Goat& goat) {
-        os << goat.name <
+        os << goat.name << " (" << goat.color << ", " << goat.age << ")";
+        return os;
+    }
+};
+
+const string Goat::names[15] = {"Bobby", "Nanny", "Billy", "Daisy", "Ginger", "Coco", "Goaty", "Luna", "Marley", "Bella", "Leo", "Simba", "Misty", "Shadow", "Finn"};
+const string Goat::colors[15] = {"Brown", "Black", "White", "Spotted", "Gray", "Tan", "Cream", "Golden", "Red", "Yellow", "Pink", "Blue", "Purple", "Orange", "Green"};
+
+class DoublyLinkedList {
+private:
+    struct Node {
+        Goat data;
+        Node* prev;
+        Node* next;
+        Node(Goat val, Node* p = nullptr, Node* n = nullptr) : data(val), prev(p), next(n) {}
+    };
+    Node* head;
+    Node* tail;
+
+public:
+    // Constructor
+    DoublyLinkedList() : head(nullptr), tail(nullptr) {}
+
+    void push_back(const Goat& value) {
+        Node* newNode = new Node(value);
+        if (!tail) // if there's no tail, the list is empty
+            head = tail = newNode;
+        else {
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
+        }
+    }
+
+    void push_front(const Goat& value) {
+        Node* newNode = new Node(value);
+        if (!head) // if there's no head, the list is empty
+            head = tail = newNode;
+        else {
+            newNode->next = head;
+            head->prev = newNode;
+            head = newNode;
+        }
+    }
