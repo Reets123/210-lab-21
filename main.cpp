@@ -82,4 +82,15 @@ public:
         }
         while (current) {
             cout << "    " << current->data << endl;
-            curren
+            current = current->next;
+        }
+    }
+
+    void print_reverse() const {
+        Node* current = tail;
+        if (!current) {
+            cout << "List is empty" << endl;
+            return;
+        }
+
+        whil
