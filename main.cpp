@@ -119,4 +119,10 @@ int main() {
     }
 
     cout << "Forward:" << endl;
-    list.prin
+    list.print(); 
+
+    cout << "Backward:" << endl;
+    list.print_reverse(); 
+
+    return 0;
+}
