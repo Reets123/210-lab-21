@@ -1,6 +1,25 @@
 // Lab 21: Goat Herd Manager 3000
 // COMSC-210 - Ibrahim Alatig 
 
+//       Goat          
+// --------------------
+// - age: int          
+// - name: string      
+// - color: string     
+// - names: string[15]  (static) 
+// - colors: string[15] (static) 
+// -------------------------------
+// + Goat()           
+// + Goat(age: int, name: string, color: string) 
+// + operator<<(os: ostream&, goat: Goat): ostream& (friend) 
+
+//     DoublyLinkedList         
+//
+// - head: Node*                
+// - tail: Node*                
+// ------------------
+// + DoublyLinke
+
 #include <iostream>
 #include <string>
 #include <cstdlib>  
