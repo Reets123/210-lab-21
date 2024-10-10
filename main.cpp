@@ -93,4 +93,12 @@ public:
             return;
         }
 
-        whil
+        while (current) {
+            cout << "    " << current->data << endl;
+            current = current->prev;
+        }
+    }
+
+    ~DoublyLinkedList() {
+        while (head) {
+            Node* 
