@@ -13,12 +13,25 @@
 // + Goat(age: int, name: string, color: string) 
 // + operator<<(os: ostream&, goat: Goat): ostream& (friend) 
 
-//     DoublyLinkedList         
+//   DoublyLinkedList         
 //
 // - head: Node*                
 // - tail: Node*                
 // ------------------
-// + DoublyLinke
+// + DoublyLinkedList()         
+// + push_back(value: Goat)     
+// + push_front(value: Goat)    
+// + print(): void              
+// + print_reverse(): void      
+// + ~DoublyLinkedList()
+
+//       Node         
+//----------------
+//- data: Goat        
+//- prev: Node*      
+//- next: Node*      
+//----------------
+//+ Node(val: Goat, p: Node*, n: Node*) 
 
 #include <iostream>
 #include <string>
