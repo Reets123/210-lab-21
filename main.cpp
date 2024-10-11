@@ -108,7 +108,7 @@ public:
 
     void print() const {
         Node* current = head;
-        if (!currrent) {
+        if (!current) {
             cout << "List is empty" << endl;
             return;
         }
